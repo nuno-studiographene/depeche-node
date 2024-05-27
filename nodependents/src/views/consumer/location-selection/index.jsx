@@ -5,6 +5,8 @@ import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import imgUrl1 from "../../../assets/fake-1.png";
 import imgUrl2 from "../../../assets/fake-2.png";
+import Layout from "../../../components/Layout";
+import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import "./styles.css";
 
@@ -91,70 +93,75 @@ const LocationSelection = () => {
   };
 
   return (
-    <div id="location-selection-wrapper">
-      <Typography id="modal-modal-title" variant="h1" component="h1">
-        Where should we take you?
-      </Typography>
-      {image === 0 && (
-        <Autocomplete
-          disablePortal
-          id="combo-box-demo"
-          options={streets}
-          sx={{ width: 300 }}
-          onChange={switchImage}
-          renderInput={(params) => (
-            <TextField {...params} label="Type your location" />
-          )}
-        />
-      )}
-      {image === 1 && (
-        <Autocomplete
-          disablePortal
-          id="combo-box-demo"
-          options={streets}
-          sx={{ width: 300 }}
-          onChange={switchImage}
-          renderInput={(params) => (
-            <TextField {...params} label="Type your destination" />
-          )}
-        />
-      )}
-      {image === 1 && (
-        <img src={imgUrl1} alt="random" className="maps-wrapper" />
-      )}
-      {image === 2 && (
-        <img src={imgUrl2} alt="random" className="maps-wrapper" />
-      )}
-
-      {image === 0 && (
-        <LoadScript
-          googleMapsApiKey="AIzaSyCRJ94h_gxrzE1VIIOrsiEoTEVFEyuYjVg"
-          libraries={libraries}
-        >
-          <GoogleMap
-            mapContainerStyle={mapContainerStyle}
-            zoom={zoom}
-            center={currentLocation || center}
-            onClick={onMapClick}
-          >
-            {markers[markers.length - 1] && (
-              <Marker
-                position={{
-                  lat: markers[markers.length - 1].lat,
-                  lng: markers[markers.length - 1].lng,
-                }}
-              />
+    <Layout>
+      <div id="location-selection-wrapper">
+        <Typography id="modal-modal-title" variant="h3" component="h3">
+          Where should we take you?
+        </Typography>
+        <br></br>
+        {image === 0 && (
+          <Autocomplete
+            disablePortal
+            id="combo-box-demo"
+            options={streets}
+            sx={{ width: 300 }}
+            onChange={switchImage}
+            renderInput={(params) => (
+              <TextField {...params} label="Type your location" />
             )}
-          </GoogleMap>
-        </LoadScript>
-      )}
-      <Link
-        to={`/consumer/booking/transportation/confirmation`}
-        className={image === 2 ? "active" : "disabled"}
-      >
-        Next
-      </Link>
-    </div>
+          />
+        )}
+        {image === 1 && (
+          <Autocomplete
+            disablePortal
+            id="combo-box-demo"
+            options={streets}
+            sx={{ width: 300 }}
+            onChange={switchImage}
+            renderInput={(params) => (
+              <TextField {...params} label="Type your destination" />
+            )}
+          />
+        )}
+        <br></br>
+        {image === 1 && (
+          <img src={imgUrl1} alt="random" className="maps-wrapper" />
+        )}
+        {image === 2 && (
+          <img src={imgUrl2} alt="random" className="maps-wrapper" />
+        )}
+
+        {image === 0 && (
+          <LoadScript
+            googleMapsApiKey="AIzaSyCRJ94h_gxrzE1VIIOrsiEoTEVFEyuYjVg"
+            libraries={libraries}
+          >
+            <GoogleMap
+              mapContainerStyle={mapContainerStyle}
+              zoom={zoom}
+              center={currentLocation || center}
+              onClick={onMapClick}
+            >
+              {markers[markers.length - 1] && (
+                <Marker
+                  position={{
+                    lat: markers[markers.length - 1].lat,
+                    lng: markers[markers.length - 1].lng,
+                  }}
+                />
+              )}
+            </GoogleMap>
+          </LoadScript>
+        )}
+        <br></br>
+        <Link
+          to={`/consumer/booking/transportation/confirmation`}
+          className={image === 2 ? "active" : "disabled"}
+        >
+          <Button variant="contained">Next</Button>
+        </Link>
+      </div>
+    </Layout>
   );
 };
 
