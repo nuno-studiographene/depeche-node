@@ -11,6 +11,7 @@ import Home from "./views/home";
 import DateSelection from "./views/consumer/date-selection";
 import LocationSelection from "./views/consumer/location-selection";
 import Confirmation from "./views/consumer/confirmation";
+import FileUpload from "./views/consumer/file-upload";
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
   {
     path: "/consumer/booking/transportation/location-selection",
     element: <LocationSelection />,
+  },
+  {
+    path: "/consumer/booking/transportation/file-upload",
+    element: <FileUpload />,
   },
   {
     path: "/consumer/booking/transportation/confirmation",

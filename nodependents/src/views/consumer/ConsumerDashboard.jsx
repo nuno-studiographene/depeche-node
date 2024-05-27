@@ -1,9 +1,9 @@
 import { TextField } from "@mui/material";
+import { Link } from "react-router-dom";
 import { SERVICES } from "../../utils/constants";
 import './styles.css';
 import Layout from "../../components/Layout";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 const ConsumerDashboard = () => {
   const [selectedServices, setSelectedServices] = useState(SERVICES);

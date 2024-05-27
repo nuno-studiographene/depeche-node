@@ -1,15 +1,53 @@
+import Layout from "../../../components/Layout";
+import Typography from "@mui/material/Typography";
+import { Button } from "@mui/material";
+import "./styles.css";
+
 const Confirmation = () => {
   return (
-    <div>
-      <header>
-        <h1>Review your order</h1>
+    <Layout>
+      <div id="confirmation-wrapper">
+        <header>
+          <Typography id="modal-modal-title" variant="h3" component="h3">
+            Review your order
+          </Typography>
 
-        <p>Date: 27th of June 2024. 3pm</p>
-        <p>Destination: Hospital Cuf na Rua Ilha do Faial</p>
+          <br></br>
 
-        <h3>Total: 30€</h3>
-      </header>
-    </div>
+          <div className="flex">
+            <Typography id="modal-modal-title" variant="h5" component="h5">
+              Service:
+            </Typography>
+            <p>Delivery of medication</p>
+          </div>
+
+          <div className="flex">
+            <Typography id="modal-modal-title" variant="h5" component="h5">
+              Date:
+            </Typography>
+            <p>27th of June 2024. 3pm</p>
+          </div>
+
+          <div className="flex">
+            <Typography id="modal-modal-title" variant="h5" component="h5">
+              Destination:
+            </Typography>
+            <p>Hospital Cuf na Rua Ilha do Faial</p>
+          </div>
+
+          <br></br>
+
+          <div className="flex">
+            <Typography id="modal-modal-title" variant="h2" component="h2">
+              Total:
+            </Typography>
+            <p className="price">33.2€</p>
+          </div>
+          <br></br>
+          <Button variant="contained">Checkout</Button>
+        </header>
+      </div>
+    </Layout>
   );
 };
 
