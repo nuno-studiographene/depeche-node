@@ -41,7 +41,7 @@ const Confirmation = () => {
             <Typography id="modal-modal-title" variant="h2" component="h2">
               Total:
             </Typography>
-            <p>33.2€</p>
+            <p className="price">33.2€</p>
           </div>
           <br></br>
           <Button variant="contained">Checkout</Button>

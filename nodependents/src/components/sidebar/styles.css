@@ -1,7 +1,7 @@
 .sidebar{
     background-color: black;
     color: white;
-    max-width: 320px;
+    max-width: 22%;
     flex-grow: 1;
     position: sticky;
 }

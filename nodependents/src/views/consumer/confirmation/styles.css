@@ -6,3 +6,8 @@
 #confirmation-wrapper .flex h5{
   margin-right: 20px;
 }
+
+#confirmation-wrapper .flex .price{
+  font-size: 64px;
+  font-weight: 600;
+}

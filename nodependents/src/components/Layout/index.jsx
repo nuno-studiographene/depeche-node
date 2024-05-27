@@ -8,7 +8,7 @@ function Layout(props) {
         minHeight: "100vh"
       }}>
         <Sidebar />
-        <div style={{ padding: '40px 20px'}}>
+        <div style={{ padding: '40px 20px', grow: 1, width: '75%'}}>
           {props.children}
          </div>
       </div>
