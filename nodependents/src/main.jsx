@@ -24,9 +24,13 @@ const router = createBrowserRouter([
   //   path: "/signup/user",
   //   element: <UserSignup />,
   // },
+  {
+    path: "/signup/worker",
+    element: <WorkerSignup />,
+  },
   // {
-  //   path: "/signup/worker",
-  //   element: <WorkerSignup />,
+  //   path: "/consumer",
+  //   element: <ConsumerDashboard />,
   // },
   {
     path: "/consumer",
@@ -34,11 +38,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/consumer/booking/pharmacy",
-    element: <Pharmacy/>,
+    element: <Pharmacy />,
   },
   {
     path: "/consumer/booking/transportation",
-    element: <Transportation/>,
+    element: <Transportation />,
   },
   {
     path: "/worker",
