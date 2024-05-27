@@ -5,7 +5,8 @@ const Home = () => {
     <div>
       <header>
         <h1>Home</h1>
-        <Link to={`/signup`}>Signupx</Link>
+        <Link to={`/signup`}>Signup user</Link>
+        <Link to={`/signup/worker`}>Signup worker</Link>
       </header>
     </div>
   );

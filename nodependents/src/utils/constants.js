@@ -1,6 +1,7 @@
-const SERVICES = [
+export const SERVICES = [
   { name: "Pharmacy", value: "pharmacy" },
   { name: "Ambulance", value: "ambulance" },
+  { name: "Transportation", value: "transportation" },
   { name: "Health care assistant", value: "health-care-assistant" },
   { name: "At Home Care", value: "at-home-care" },
   { name: "Physical Treatment", value: "physical-treatment" },
