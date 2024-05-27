@@ -1,0 +1,51 @@
+.sidebar{
+    background-color: black;
+    color: white;
+    max-width: 320px;
+    flex-grow: 1;
+    position: sticky;
+}
+
+.sidebar .container{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+.sidebar .logo{
+    color: white;
+    background: #9CCAF4;
+    background: linear-gradient(to right, #9CCAF4 0%, #FFFFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    font-size: xx-large;
+    margin-bottom: 30px;
+}
+
+.sidebar .nav{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.sidebar .nav.bottom{
+    flex-grow: 1;
+    justify-content: end;
+}
+
+.sidebar .nav a{
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 20px 20px;
+    border-radius: 20px;
+}
+.sidebar .nav a.active,
+.sidebar .nav a:hover{
+    background-color: white;
+    color: black;
+}
