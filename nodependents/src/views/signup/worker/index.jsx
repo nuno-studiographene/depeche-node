@@ -39,31 +39,47 @@ const WorkerSignup = () => {
       </header>
       <form
         style={{
-          border: "solid 2px lightgray",
           borderRadius: "20px",
           padding: "20px 40px",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
-          width: "50%",
           gap: "30px",
+          width: "100%",
+          height: "80%",
+          overflow: "auto",
         }}
       >
-        <TextField
-          id="standard-basic"
-          label="Enter your full name"
-          variant="standard"
-          value={fullName}
-          onChange={(e) => handleName(e)}
-        />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-evenly",
+            gap: "50px",
+          }}
+        >
+          <TextField
+            id="standard-basic"
+            sx={{ width: "30%" }}
+            label="Enter your full name"
+            variant="standard"
+            value={fullName}
+            onChange={(e) => handleName(e)}
+          />
 
+          <TextField
+            id="standard-basic"
+            sx={{ width: "30%" }}
+            label="Location"
+            variant="standard"
+            value={fullName}
+            onChange={(e) => handleName(e)}
+          />
+        </div>
         <p>Which services do you provide?</p>
         <div
           style={{
             display: "flex",
             flexWrap: "wrap",
-            justifyContent: "center",
-            gap: "15px",
+            gap: "20px",
           }}
         >
           {SERVICES.map((service, index) => (
@@ -73,21 +89,57 @@ const WorkerSignup = () => {
               }}
               key={service.value + index}
               style={{
+                width: "420px",
+                height: "150px",
                 display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
                 gap: "10px",
-                padding: "8px 16px",
-                borderRadius: "20px",
-                border: "solid 1px lightgray",
-                backgroundColor: "whitesmoke",
-                color: "black",
+                padding: "12px 24px",
+                borderRadius: "25px",
+                backgroundColor: "black",
+                color: "white",
+                fontSize: "22px",
               }}
             >
               {service.name}
-              <input type="checkbox" value={service.value} />
+              <p style={{ fontSize: "12px", color: "lightgrey" }}>
+                {service.description}
+              </p>
+              <div
+                style={{
+                  display: "flex",
+                  width: "100%",
+                  justifyContent: "end",
+                  alignItems: "end",
+                  padding: "8px 4px",
+                }}
+              >
+                <input
+                  style={{
+                    display: "flex",
+                    justifyContent: "end",
+                    width: "20px",
+                    height: "20px",
+                  }}
+                  type="checkbox"
+                  value={service.value}
+                />
+              </div>
             </label>
           ))}
         </div>
-        <Button variant="outlined" type="submit" sx={{ borderRadius: "20px" }}>
+        <Button
+          variant="outlined"
+          type="submit"
+          sx={{
+            borderRadius: "20px",
+            width: "30%",
+            alignSelf: "center",
+            color: "blue",
+            fontSize: "18px",
+          }}
+        >
           Register now
         </Button>
       </form>

@@ -1,8 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Signup from "./views/signup";
-import UserSignup from "./views/signup/user";
 import WorkerSignup from "./views/signup/worker";
 import "./index.css";
 import ConsumerDashboard from "./views/consumer/ConsumerDashboard";
