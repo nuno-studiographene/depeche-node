@@ -12,6 +12,8 @@ const Confirmation = () => {
             Review your order
           </Typography>
 
+          <br></br>
+
           <div className="flex">
             <Typography id="modal-modal-title" variant="h5" component="h5">
               Service:

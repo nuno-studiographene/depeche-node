@@ -155,7 +155,7 @@ const LocationSelection = () => {
         )}
         <br></br>
         <Link
-          to={`/consumer/booking/transportation/confirmation`}
+          to={`/consumer/booking/transportation/file-upload`}
           className={image === 2 ? "active" : "disabled"}
         >
           <Button variant="contained">Next</Button>
