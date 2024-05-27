@@ -5,7 +5,7 @@ const Dashboard = () => {
     <div>
       <header>
         <h1>Dashboard</h1>
-        <Link to={`/signup`}>Signup</Link>
+        <Link to={`/signup`}>Signupx</Link>
       </header>
     </div>
   );
