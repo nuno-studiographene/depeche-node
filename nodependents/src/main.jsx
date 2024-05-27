@@ -8,8 +8,11 @@ import "./index.css";
 import ConsumerDashboard from "./views/consumer/ConsumerDashboard";
 import WorkerDashboard from "./views/worker/WorkerDashboard";
 import Pharmacy from "./views/consumer/booking/Pharmacy";
-import Transportation from "./views/consumer/booking/Transportation";
+/* import Transportation from "./views/consumer/booking/Transportation"; */
 import Home from "./views/home";
+import DateSelection from "./views/consumer/date-selection";
+import LocationSelection from "./views/consumer/location-selection";
+import Confirmation from "./views/consumer/confirmation";
 
 const router = createBrowserRouter([
   {
@@ -40,9 +43,21 @@ const router = createBrowserRouter([
     path: "/consumer/booking/pharmacy",
     element: <Pharmacy />,
   },
-  {
+  /* {
     path: "/consumer/booking/transportation",
     element: <Transportation />,
+  }, */
+  {
+    path: "/consumer/booking/transportation/date-selection",
+    element: <DateSelection />,
+  },
+  {
+    path: "/consumer/booking/transportation/location-selection",
+    element: <LocationSelection />,
+  },
+  {
+    path: "/consumer/booking/transportation/confirmation",
+    element: <Confirmation />,
   },
   {
     path: "/worker",
