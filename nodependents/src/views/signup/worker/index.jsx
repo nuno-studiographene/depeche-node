@@ -52,13 +52,15 @@ const WorkerSignup = () => {
         <div
           style={{
             display: "flex",
-            justifyContent: "space-evenly",
+            justifyContent: "start",
             gap: "50px",
           }}
         >
           <TextField
             id="standard-basic"
-            sx={{ width: "30%" }}
+            sx={{
+              width: "30%",
+            }}
             label="Enter your full name"
             variant="standard"
             value={fullName}
@@ -67,8 +69,21 @@ const WorkerSignup = () => {
 
           <TextField
             id="standard-basic"
-            sx={{ width: "30%" }}
+            sx={{
+              width: "30%",
+            }}
             label="Location"
+            variant="standard"
+            value={fullName}
+            onChange={(e) => handleName(e)}
+          />
+
+          <TextField
+            id="standard-basic"
+            sx={{
+              width: "30%",
+            }}
+            label="Description"
             variant="standard"
             value={fullName}
             onChange={(e) => handleName(e)}
@@ -89,6 +104,7 @@ const WorkerSignup = () => {
               }}
               key={service.value + index}
               style={{
+                cursor: "pointer",
                 width: "420px",
                 height: "150px",
                 display: "flex",
@@ -119,8 +135,8 @@ const WorkerSignup = () => {
                   style={{
                     display: "flex",
                     justifyContent: "end",
-                    width: "20px",
-                    height: "20px",
+                    width: "25px",
+                    height: "25px",
                   }}
                   type="checkbox"
                   value={service.value}
