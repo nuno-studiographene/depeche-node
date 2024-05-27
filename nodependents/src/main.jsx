@@ -27,14 +27,18 @@ const router = createBrowserRouter([
   //   path: "/signup/user",
   //   element: <UserSignup />,
   // },
-  // {
-  //   path: "/signup/worker",
-  //   element: <WorkerSignup />,
-  // },
+  {
+    path: "/signup/worker",
+    element: <WorkerSignup />,
+  },
   // {
   //   path: "/consumer",
   //   element: <ConsumerDashboard />,
   // },
+  {
+    path: "/consumer",
+    element: <ConsumerDashboard />,
+  },
   {
     path: "/consumer/booking/pharmacy",
     element: <Pharmacy />,
